@@ -37,7 +37,7 @@ jobs:
       - name: Rebuild the dist/ directory
         run: yarn prepare
 
-      - uses: EndBug/add-and-commit@v9
+      - uses: EndBug/add-and-commit@v10
         with:
           add: 'dist'
           message: 'Add new /dist'
