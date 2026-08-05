@@ -1,5 +1,13 @@
 <h1 align="center">GitHub Actions's Debounce</h1>
 
+> **⚠️ Deprecated.** GitHub Actions now has this built in via the [`concurrency`](https://docs.github.com/en/actions/using-jobs/using-concurrency) key — no action needed. This repo is archived; use the native option below instead.
+>
+> ```yaml
+> concurrency:
+>   group: ${{ github.workflow }}-${{ github.ref }}
+>   cancel-in-progress: true
+> ```
+
 Useful if you have a workflow triggering on merge and prefer building only the latest and greatest version of your branch.
 
 This package will pause the execution of your workflow run and wait to be canceled by a more recent workflow run or resume execution.
